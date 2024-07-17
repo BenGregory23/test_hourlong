@@ -1,0 +1,17 @@
+type Company {
+  id: Int!
+  name: String!
+  products: [Product!]!
+}
+
+type Product {
+  id: Int!
+  name: String!
+  price: Float!
+  company: Company!
+}
+
+type Query {
+  getProduct(id: Int!): Product!
+  getCompany(id: Int!): Company!
+}
